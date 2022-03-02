@@ -1,7 +1,7 @@
 import Navbar from "components/Navbar";
 import Admin from "pages/Admin";
 import Catalog from "pages/Catalog";
-import ProductDetails from "pages/CatalogDetails";
+import ProductDetails from "pages/ProductDetails";
 import Home from "pages/Home";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
