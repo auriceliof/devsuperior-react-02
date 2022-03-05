@@ -1,10 +1,14 @@
-const Admin = () => {
+import Navbar from './Navbar';
 
-    return (
-        <div>
-            <h1>Página do Admin</h1>
-        </div>
-    );
-}
+const Admin = () => {
+  return (
+    <div>
+      <Navbar />
+      <div className="admin-container">
+        <h1>Conteúdo</h1>
+      </div>
+    </div>
+  );
+};
 
 export default Admin;
