@@ -2,7 +2,19 @@ $theme-colors: (
   'primary': #1890FF,
 );
 
-$body-bg: #e5e5e5;
-$body-color: #fff;
+$body-bg: #fff;
+$body-color: #000;
 
 @import '~bootstrap/scss/bootstrap.scss';
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:  700;
+  margin-bottom: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: unset;
+}
+

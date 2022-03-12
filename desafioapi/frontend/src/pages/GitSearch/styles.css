@@ -1,0 +1,95 @@
+.gitsearch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-left: 40px;
+}
+
+.gitsearch-card {
+  justify-content: flex-start;
+  width: 1251px;
+  height: 270px;
+  background: #e6f7ff;
+  border-radius: 16px;
+  margin-top: 116px;
+  padding: 31px;
+}
+
+.gitsearch-title {
+  margin-top: 27px;
+  letter-spacing: 0.02em;
+}
+
+.gitsearch-form-container {
+  margin-top: 12px;
+}
+
+.search-input {
+  width: 298px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 17px;
+}
+
+.btn-container {
+  margin-top: 35px;
+}
+
+.btn-container .gitsearch-button {
+  font-size: 16px;
+  color: #fff;
+}
+
+.gitsearch-perfil-container {
+  display: flex;
+  width: 1251px;
+  height: 334px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-top: 54px;
+  padding: 44px;
+}
+
+.gitsearch-perfil-container h4 {
+  color: #1890ff;
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+
+.gitsearch-perfil-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 247px;
+  height: 247px;
+  background-color: #fff;
+  margin-right: 40px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+}
+
+.gitsearch-perfil-informations {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.gitsearch-perfil-informations h5 {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 4px;
+}

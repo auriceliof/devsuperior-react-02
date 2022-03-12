@@ -1,0 +1,24 @@
+.home-container {
+    margin-left: 40px;
+}
+
+.home-title {
+    margin-top: 27px;
+    letter-spacing: 0.02em;
+}
+
+.home-content {
+    margin-top: 10px;
+    color: #7E7E7E;
+    letter-spacing: 0.02em;
+}
+
+.btn-container {
+    margin-top: 35px;
+}
+
+.btn-container .home-button {  
+  font-size: 16px;
+  color: #FFF;
+}
+
