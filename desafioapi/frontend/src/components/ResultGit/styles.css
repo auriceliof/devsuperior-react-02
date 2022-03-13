@@ -1,0 +1,49 @@
+.resultgit-container {
+    display: flex;
+    width: 1251px;
+    height: 334px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-left: -30px;
+    padding: 44px;
+  }
+  
+  .resultgit-container h4 {
+    color: #1890ff;
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+  
+  .resultgit-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 247px;
+    height: 247px;
+    background-color: #fff;
+    margin-right: 40px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+  }
+  
+  .resultgit-informations {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  
+  .resultgit-descriptions h5 {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+  }
