@@ -1,6 +1,16 @@
 import ResultGit from 'components/ResultGit';
 import './styles.css';
 const GitSearch = () => {
+
+  const handleChange = ( event: React.ChangeEvent<HTMLInputElement> ) => {
+    console.log( "Mudou: " + event.target.value )
+  }
+
+  const handleSubmit = ( event: React.FormEvent<HTMLFormElement> ) => {
+    event.preventDefault();
+    console.log( "Clicou no Botao!" )
+  }
+
   return (
     <div className="gitsearch-container">
       <>
@@ -8,13 +18,13 @@ const GitSearch = () => {
           <div className="gitsearch-title">
             <h1>Encontre um perfil Github</h1>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="gitsearch-form-container">
               <input
                 type="text"
                 className="search-input"
                 placeholder="Usuário Github"
-                onChange={() => {}}
+                onChange={handleChange}
               />
             </div>
             <div className="btn-container">
