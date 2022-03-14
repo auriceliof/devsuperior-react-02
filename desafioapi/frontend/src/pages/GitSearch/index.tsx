@@ -1,14 +1,27 @@
 import ResultGit from 'components/ResultGit';
+import { useState } from 'react';
 import './styles.css';
+
+type formData = {
+  git: string;
+};
+
 const GitSearch = () => {
 
+  const [ formData, setFormData ] = useState<formData>({
+    git: '',
+  }); 
+
   const handleChange = ( event: React.ChangeEvent<HTMLInputElement> ) => {
-    console.log( "Mudou: " + event.target.value )
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setFormData( { ...formData, [name]:value } )
   }
 
   const handleSubmit = ( event: React.FormEvent<HTMLFormElement> ) => {
     event.preventDefault();
-    console.log( "Clicou no Botao!" )
+    console.log( formData )
   }
 
   return (
@@ -22,6 +35,8 @@ const GitSearch = () => {
             <div className="gitsearch-form-container">
               <input
                 type="text"
+                name="git"
+                value={formData.git}
                 className="search-input"
                 placeholder="Usuário Github"
                 onChange={handleChange}
