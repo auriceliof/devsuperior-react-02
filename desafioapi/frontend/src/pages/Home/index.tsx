@@ -1,4 +1,5 @@
-import './styles.css'
+import { Link } from 'react-router-dom';
+import './styles.css';
 const Home = () => {
   return (
     <div className="home-container">
@@ -10,7 +11,9 @@ const Home = () => {
           <h6>Bootcamp Spring React - DevSuperior</h6>
         </div>
         <div className="btn-container">
-          <button className="btn btn-primary home-button">Começar</button>
+          <Link to="/perfils">
+            <button className="btn btn-primary home-button">Começar</button>
+          </Link>
         </div>
       </>
     </div>
