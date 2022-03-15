@@ -1,3 +1,4 @@
+import axios from 'axios';
 import ResultGit from 'components/ResultGit';
 import { useState } from 'react';
 import './styles.css';
@@ -6,23 +7,40 @@ type formData = {
   git: string;
 };
 
+type Perfil = {
+  avatar_url: string;
+  url: '';
+  followers: number;
+  location: string;
+  name: string;
+};
+
 const GitSearch = () => {
+  const [perfil, setPerfil] = useState<Perfil>();
 
-  const [ formData, setFormData ] = useState<formData>({
+  const [formData, setFormData] = useState<formData>({
     git: '',
-  }); 
+  });
 
-  const handleChange = ( event: React.ChangeEvent<HTMLInputElement> ) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
     const value = event.target.value;
 
-    setFormData( { ...formData, [name]:value } )
-  }
+    setFormData({ ...formData, [name]: value });
+  };
 
-  const handleSubmit = ( event: React.FormEvent<HTMLFormElement> ) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log( formData )
-  }
+
+    axios
+      .get(`https://api.github.com/users/${formData.git}`)
+      .then((response) => {
+        setPerfil(response.data);
+      })
+      .catch((error) => {
+        setPerfil(undefined);
+      });
+  };
 
   return (
     <div className="gitsearch-container">
@@ -48,15 +66,17 @@ const GitSearch = () => {
               </button>
             </div>
           </form>
-          <div>
-            <ResultGit
-              foto="Foto"
-              perfil="Perfil"
-              seguidores={1000}
-              localidade="Localidade"
-              nome="Nome"
-            />
-          </div>
+          {perfil && (
+            <div>
+              <ResultGit
+                foto={perfil.avatar_url}
+                perfil={perfil.url}
+                seguidores={perfil.followers}
+                localidade={perfil.location}
+                nome={perfil.name}
+              />
+            </div>
+          )}
         </div>
       </>
     </div>
